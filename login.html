@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Evaluation Practice</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="D:\Harsh\College\Coding\Web Dev\3000px\media\logo15.png" type="image/x-icon">
+    <title>Log in / 500px</title>
     <style>
-        
-        
-
-
-        .main{
-           
+        .main {
             justify-content: space-between;
             margin: 5px 5px 2px;
             font-family: sans-serif;
-           
         }
 
-        .form{
-            margin-right: 50%;
-            margin-left: 37%;
+        .form {
+            margin-left: 35%;
             width: 30%;
             height: 660px;
             box-sizing: border-box;
             background-color: white;
-           text-align: center;
-            box-shadow: 1px 1px 5px black;
+            text-align: center;
+            box-shadow: 1px 1px 2px grey;
             border-radius: 10px;
             margin-bottom: 25px;
-           
-        
+            padding-top: 10px;
         }
 
-        .form h2{
+        .form h2 {
             text-align: center;
-            margin-top: 40px;
         }
 
-        input{
+        input {
             width: 85%;
             margin-bottom: 15px;
             height: 35px;
@@ -49,212 +42,207 @@
             border-radius: 5px;
         }
 
-        .a
-        {
+        .a {
             color: white;
-            background-color: #2a9df4;
+            background-color: #0870d1;
             border: none;
             border-radius: 40px;
             cursor: pointer;
             width: 85%;
             height: 50px;
             font-size: 17px;
-            
         }
-        .a1
-        {
+
+        .a1,
+        .a2,
+        .a3 {
+            border-radius: 40px;
+            cursor: pointer;
+            width: 85%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: left;
+            height: 50px;
+            font-size: 17px;
+        }
+
+        .a1 {
+            border: none;
             color: white;
             background-color: #000000;
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            width: 85%;
-            background-image: url('https://i.pinimg.com/originals/5c/f6/fa/5cf6fa281b3652bb3a0b52c31fde83bf.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: left;
-            height: 50px;
-            font-size: 17px;
-           
+            background-image: url("https://i.pinimg.com/originals/5c/f6/fa/5cf6fa281b3652bb3a0b52c31fde83bf.png");
         }
-        .a2
-        {
+
+        .a2 {
+            border: none;
             color: white;
-            background-color: #2c6b9b;
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            width: 85%;
-             background-image: url('https://seeklogo.com/images/F/facebook-circle-logo-866E22DBE0-seeklogo.com.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: left;
-            height: 50px;
-            font-size: 17px;
+            background-color: #3c5a96;
+            background-image: url("https://seeklogo.com/images/F/facebook-circle-logo-866E22DBE0-seeklogo.com.png");
         }
-        .a3
-        {
-            color: rgb(0, 0, 0);
-            background-color:white;
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            border: solid rgb(209, 205, 205) 2px;
-            width: 85%;
-             background-image: url('https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            padding-left: 20px;
-            position: left;
-            height: 50px;
-            font-size: 17px;
+
+        .a3 {
+            color: grey;
+            background-color: white;
+            background-image: url("https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png");
+            border: 5px solid grey I !important;
         }
+
+
         a:hover {
-  color: rgb(105, 100, 179);
-  background-color: transparent;
+            color: rgb(105, 100, 179);
+            background-color: transparent;
+        }
 
-}
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(235, 227, 227, 0.596);
-}
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: white;
-    width: 100%;
-    top: 0;
-}
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
 
-header a img {
-    float: left;
-    margin-top: 2%;
-    margin-right: 1%;
-}
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f8fa;
+        }
 
-.nav__links {
-    list-style: none;
-    padding: 10px 30px 10px 30px;
-    font-size: 17px;
-    width: 70%;
-    margin-left: 2%;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 0 2px grey;
+        }
 
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
+        header a img {
+            float: left;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
 
-.nav__links li a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: black;
-}
+        .nav__links {
+            list-style: none;
+            padding: 10px 30px 10px 30px;
+            font-size: 16px;
+            width: 70%;
+            margin-left: 2%;
+        }
 
-.nav__links li a:hover {
-    color: #0870d1;
-}
+        .nav__links li {
+            display: inline-block;
+            padding: 0px 10px;
+        }
 
-li.dropdown {
-    display: inline-block;
-}
+        .nav__links li a {
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            color: black;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+        .nav__links li a:hover {
+            color: #0870d1;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-    background-color: white;
-    
+        li.dropdown {
+            display: inline-block;
+        }
 
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: white;
+        }
 
-.dropdown-content a:hover {
-    background-color: #0870d1;
-    color: white !important;
-}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
 
-.login {
-    padding: 0px 25px 10px 25px;
-    margin-top: 2%;
-    margin-right: 2%;
-}
+        .dropdown-content a:hover {
+            background-color: #0870d1;
+            color: white !important;
+        }
 
-.login li {
-    display: inline-block;
-    padding: 0px 15px;
-}
+        .login {
+            padding: 0px 25px 10px 25px;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
 
-.login li .want-border {
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
+        .login li {
+            display: inline-block;
+            padding: 0px 15px;
+        }
 
-.login li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
+        .login li .want-border {
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
 
-.login li a:hover {
-    color: #0870d1;
-}
-.alpha{
-    background-color: white;
-}
-.col:link{
-    color: #2a9df4;
-}
-.col:visited{
-    color: #2a9df4;
-}
-input{
-    height:40px;
-}
-.beta:link{
- background-color: #76b1e9;
- font-size: 14px;
-}
+        .login li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        .login li a:hover {
+            color: #0870d1;
+        }
+
+        .col:link {
+            color: #2a9df4;
+        }
+
+        .col:visited {
+            color: #2a9df4;
+        }
+
+        input {
+            height: 40px;
+        }
+
+        .beta:link {
+            background-color: #91c4f2;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px;
+            border-radius: 3px;
+        }
     </style>
 </head>
-<body >
-    <header class="alpha">
+
+<body>
+    <header>
         <div class="nav__links">
-            <a href="https://500px.com/login"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEDQRKTbBBd75RtankTTGx4V7p_lPl_gzMLw&usqp=CAU" width="70px"
-                    height="18px"> </a>
+            <a href="https://500px.com/login">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEDQRKTbBBd75RtankTTGx4V7p_lPl_gzMLw&usqp=CAU"
+                    width="70px" height="18px" />
+            </a>
             <ul>
-                <li class="dropdown"> <a class="dropbtn" href="Galleries.html"> Discover </a>
+                <li class="dropdown">
+                    <a class="dropbtn" href="Galleries.html"> Discover </a>
                     <div class="dropdown-content">
                         <a href="Popular.html">Popular</a>
                         <a href="Fresh.html">Fresh</a>
@@ -262,7 +250,8 @@ input{
                         <a href="Galleries.html">Galleries</a>
                     </div>
                 </li>
-                <li class="dropdown"> <a class="dropbtn" href="Galleries.html"> Licensing </a>
+                <li class="dropdown">
+                    <a class="dropbtn" href="Galleries.html"> Licensing </a>
                     <div class="dropdown-content">
                         <a href="Popular.html">About Licensing</a>
                         <a href="Fresh.html">Become a Contributor</a>
@@ -272,40 +261,47 @@ input{
                         <a href="Galleries.html">Commercial Grants</a>
                     </div>
                 </li>
-                <li> <a href="Pricing.html"> NFT VAULT&nbsp; <a href="https://500px.com/login" class="beta" >BETA</a> </a> </li>
-                <li> <a href="About.html"> Memberships </a> </li>
-                <li> <a href="Contact-Us.html"> Quests</a> </li>
-                <li> <a href="Contact-Us.html"> Blog</a> </li>
-               
+                <li>
+                    <a href="Pricing.html">
+                        NFT VAULT&nbsp;
+                        <a href="https://500px.com/login" class="beta">BETA</a>
+                    </a>
+                </li>
+                <li><a href="About.html"> Memberships </a></li>
+                <li><a href="Contact-Us.html"> Quests</a></li>
+                <li><a href="Contact-Us.html"> Blog</a></li>
             </ul>
         </div>
 
         <ul class="login">
-            <li> <a href="Login.html"> Log In </a> </li>
-            <li> <a href="Cart.html" class="want-border"> Sign Up </a> </li>
+            <li><a href="Login.html"> Log In </a></li>
+            <li><a href="Cart.html" class="want-border"> Sign Up </a></li>
         </ul>
     </header>
-    
-    <br><br><br><br><br><br>
-   <div class="main">
-        
+
+    <br><br><br><br><br>
+    <div class="main">
         <div class="form">
-            <br>
-            <h2>Log in to 500px</h2><br>
+            <h2>Log in to 500px</h2>
+            <br />
             <form>
-                <label>Email or Username*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br><br>
-                <input type="email" > <br>
-                <label>Password*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://500px.com/login" class="col" >Forgot password?</a></label><br><br>
-                <input type="password" ><br><br>
-                
-                <input type="submit" value="Log in" class="a"><br><br>
-                <input type="submit" value="Log in with Apple" class="a1"><br>
-                <input type="submit" value="Log in with Facebook" class="a2"><br>
-                <input type="submit" value="Log in with Google" class="a3"><br>
-                <p>Dont have an account ?&nbsp;&nbsp;<a href="https://500px.com/login" class="col" >Sign up</a></p>
-                
+                <label>Email or
+                    Username*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br /><br />
+                <input type="email" /> <br />
+                <label>Password*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                        href="https://500px.com/login" class="col">Forgot password?</a></label><br /><br />
+                <input type="password" /><br /><br />
+
+                <input type="submit" value="Log in" class="a" /><br /><br />
+                <input type="submit" value="Log in with Apple" class="a1" /><br />
+                <input type="submit" value="Log in with Facebook" class="a2" /><br />
+                <input type="submit" value="Log in with Google" class="a3" /><br />
+                <p>
+                    Dont have an account ?&nbsp;&nbsp;<a href="https://500px.com/login" class="col">Sign up</a>
+                </p>
             </form>
-         </div>
+        </div>
     </div>
 </body>
+
 </html>
