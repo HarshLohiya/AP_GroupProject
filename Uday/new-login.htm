@@ -120,6 +120,7 @@
             position: fixed;
             background-color: white;
             width: 100%;
+            height: 80px;
             top: 0;
             box-shadow: 0 0 2px grey;
         }
@@ -157,6 +158,12 @@
             display: inline-block;
         }
 
+        .arrow {
+            float: right;
+            margin-top: -19px;
+            margin-left: 5px;
+        }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -185,15 +192,15 @@
 
         .login {
             padding: 0px 25px 10px 25px;
-            margin-top: 2%;
-            margin-right: 2%;
+            margin-top: 18px;
+            width: 33%;
         }
 
         .login li {
             display: inline-block;
-            padding: 0px 15px;
+            padding: 0px 8px;
         }
-        
+
         input[type="text"] {
             border: none;
             border-radius: 15px;
@@ -225,18 +232,6 @@
             color: #0870d1;
         }
 
-        .col:link {
-            color: #2a9df4;
-        }
-
-        .col:visited {
-            color: #2a9df4;
-        }
-
-        input {
-            height: 40px;
-        }
-
         .beta:link {
             background-color: #91c4f2;
             font-size: 12px;
@@ -247,6 +242,14 @@
 
         .beta:hover {
             color: black !important;
+        }
+
+        .col:link {
+            color: #2a9df4;
+        }
+
+        .col:visited {
+            color: #2a9df4;
         }
     </style>
 </head>
@@ -260,7 +263,9 @@
             </a>
             <ul>
                 <li class="dropdown">
-                    <a class="dropbtn" href="Galleries.html"> Discover </a>
+                    <a class="dropbtn" href="Galleries.html"> Discover <img class="arrow"
+                            src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
+                            height="20px"></a>
                     <div class="dropdown-content">
                         <a href="Popular.html">Popular</a>
                         <a href="Fresh.html">Fresh</a>
@@ -269,7 +274,9 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a class="dropbtn" href="Galleries.html"> Licensing </a>
+                    <a class="dropbtn" href="Galleries.html"> Licensing <img class="arrow"
+                            src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
+                            height="20px"></a>
                     <div class="dropdown-content">
                         <a href="Popular.html">About Licensing</a>
                         <a href="Fresh.html">Become a Contributor</a>
@@ -293,8 +300,8 @@
 
         <ul class="login">
             <input type="text" placeholder="Search 500px">
-            <li><a href="new-login.htm"> Log In </a></li>
-            <li><a href="signup500px.htm" class="want-border"> Sign Up </a></li>
+            <li><a href="Login.html"> Log in </a></li>
+            <li><a href="Cart.html" class="want-border"> Sign Up </a></li>
         </ul>
     </header>
 
