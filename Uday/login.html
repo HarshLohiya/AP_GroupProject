@@ -2,137 +2,333 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherlock Profile / 3000px</title>
-    <link href="profile.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="D:\Harsh\College\Coding\Web Dev\3000px\media\logo15.png" type="image/x-icon">
+    <title>Log in / 500px</title>
+    <style>
+        .main {
+            justify-content: space-between;
+            margin: 5px 5px 2px;
+            font-family: sans-serif;
+        }
+
+        .form {
+            margin-left: 35%;
+            width: 30%;
+            height: 660px;
+            box-sizing: border-box;
+            background-color: white;
+            text-align: center;
+            box-shadow: 1px 1px 2px grey;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            padding-top: 10px;
+        }
+
+        .form h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 85%;
+            margin-bottom: 15px;
+            height: 35px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            padding-left: 8px;
+            border: solid rgb(209, 205, 205) 1px;
+            border-radius: 5px;
+        }
+
+        .a {
+            color: white;
+            background-color: #0870d1;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            width: 85%;
+            height: 50px;
+            font-size: 17px;
+        }
+
+        .a1,
+        .a2,
+        .a3 {
+            border-radius: 40px;
+            cursor: pointer;
+            width: 85%;
+            background-repeat: no-repeat;
+            background-position: 15px;
+            position: left;
+            height: 50px;
+            font-size: 17px;
+        }
+
+        .a1 {
+            border: none;
+            color: white;
+            background-color: #000000;
+            background-image: url("https://cdn.freebiesupply.com/logos/large/2x/apple-1-logo-black-and-white.png");
+            background-size: 25px;
+        }
+
+        .a2 {
+            border: none;
+            color: white;
+            background-color: #3c5a96;
+            background-image: url("https://seeklogo.com/images/F/facebook-circle-logo-866E22DBE0-seeklogo.com.png");
+            background-size: 35px;
+        }
+
+        .a3 {
+            color: grey;
+            background-color: white;
+            background-image: url("https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png");
+            border: 5px solid grey I !important;
+            background-size: 25px;
+        }
+
+
+        a:hover {
+            color: rgb(105, 100, 179);
+            background-color: transparent;
+        }
+
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f8fa;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            height: 80px;
+            top: 0;
+            box-shadow: 0 0 2px grey;
+        }
+
+        header a img {
+            float: left;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
+
+        .nav__links {
+            list-style: none;
+            padding: 10px 30px 10px 30px;
+            font-size: 16px;
+            width: 60%;
+            margin-left: 2%;
+        }
+
+        .nav__links li {
+            display: inline-block;
+            padding: 0px 10px;
+        }
+
+        .nav__links li a {
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav__links li a:hover {
+            color: #0870d1;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .arrow {
+            float: right;
+            margin-top: -19px;
+            margin-left: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: white;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0870d1;
+            color: white !important;
+        }
+
+        .login {
+            padding: 0px 25px 10px 25px;
+            margin-top: 18px;
+            width: 32%;
+        }
+
+        .login li {
+            display: inline-block;
+            padding: 0px 8px;
+        }
+
+        input[type="text"] {
+            border: none;
+            border-radius: 15px;
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: 10px;
+            background-image: url(search.svg);
+            background-color: #f7f8fa;
+            height: 35px;
+            width: 155px;
+            font-size: 16px;
+            padding-left: 45px;
+        }
+
+        .login li .want-border {
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .login li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        .login li a:hover {
+            color: #0870d1;
+        }
+
+        .beta:link {
+            background-color: #91c4f2;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px;
+            border-radius: 3px;
+        }
+
+        .beta:hover {
+            color: black !important;
+        }
+
+        .col:link {
+            color: #2a9df4;
+        }
+
+        .col:visited {
+            color: #2a9df4;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main">
-        <header>
-            <div class="nav__links">
-                <a href="https://500px.com/login">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEDQRKTbBBd75RtankTTGx4V7p_lPl_gzMLw&usqp=CAU"
-                        width="70px" height="18px" />
-                </a>
-                <ul>
-                    <li class="dropdown">
-                        <a class="dropbtn" href="Galleries.html"> Discover <img class="arrow"
-                                src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
-                                height="20px"></a>
-                        <div class="dropdown-content">
-                            <a href="Popular.html">Popular</a>
-                            <a href="Fresh.html">Fresh</a>
-                            <a href="Echoice.html">Editors' Choice</a>
-                            <a href="Galleries.html">Galleries</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropbtn" href="Galleries.html"> Licensing <img class="arrow"
-                                src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
-                                height="20px"></a>
-                        <div class="dropdown-content">
-                            <a href="Popular.html">About Licensing</a>
-                            <a href="Fresh.html">Become a Contributor</a>
-                            <a href="Echoice.html">Submission Requirements</a>
-                            <a href="Galleries.html">Content types</a>
-                            <a href="Galleries.html">Content Distribution</a>
-                            <a href="Galleries.html">Commercial Grants</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="Pricing.html">
-                            NFT VAULT&nbsp;
-                            <a href="https://500px.com/login" class="beta">BETA</a>
-                        </a>
-                    </li>
-                    <li><a href="About.html"> Memberships </a></li>
-                    <li><a href="Contact-Us.html"> Quests</a></li>
-                    <li><a href="Contact-Us.html"> Blog</a></li>
-                </ul>
-            </div>
-
-            <ul class="login">
-                <input type="text" placeholder="Search 500px">
-                <li><a href="Login.html"> Log in </a></li>
-                <li><a href="Cart.html" class="want-border"> Sign Up </a></li>
-            </ul>
-        </header>
-        <div class="image">
-            <img src="tiger.jpg" width="100%" height="450px">
-        </div>
-        <div class="details">
-            <div class="name">Sherlock</div>
-            <div class="address">Nagpur, Maharastra</div>
-            <div class="follow">
-                <a href="#" class="btn">Follow</a>
-            </div>
-            <div class="description">
-                <p class="des">Open To Collaboration Retouch lessons, tutorials, mentoring</p>
-            </div>
-            <div class="stats">
-                <div class="follower_det">
-                    <p class="num1">10.8k &nbsp;</p>
-                    <p class="followers">
-                        <span>followers &nbsp;&nbsp;</span>
-                    </p>
-                </div>
-                <div class="following_det">
-                    <p class="num2">3 &nbsp;</p>
-                    <p class="following">
-                        <span>following </span>
-                    </p>
-                </div>
-                <p
-                    style="font-family: Helvetica Neue, HelveticaNeue, Helvetica, FreeSans, Arial, sansserif; font-size: 16px">
-                    &nbsp;&nbsp; 89.0K Photo Like</p>
-                <p
-                    style="font-family: Helvetica Neue, HelveticaNeue, Helvetica, FreeSans, Arial, sansserif; font-size: 16px">
-                    &nbsp;&nbsp; 8.8M Photo impressions</p>
-            </div>
-            <div class="social">
-                <div class="insta">
-                    <a href="https://www.instagram.com/v1k45h_rajput/" target="blank">
-                        <div class="insta2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M20.5 3.5C18.3 1.3 15.3 0 12 0C12 0 12 0 11.9 0C8.8 0 5.8 1.2 3.5 3.5C1.3 5.7 0 8.7 0 12C0 18.6 5.3 24 12 24C18.6 24 24 18.6 24 12C24 8.8 22.8 5.8 20.5 3.5ZM12 22.6C6.1 22.6 1.4 17.8 1.4 12C1.4 9.2 2.5 6.5 4.5 4.5C6.5 2.5 9.1 1.4 12 1.4C14.8 1.4 17.5 2.5 19.5 4.5C21.5 6.5 22.6 9.2 22.6 12C22.6 17.9 17.8 22.6 12 22.6Z"
-                                    fill="#222222"></path>
-                                <path
-                                    d="M15.7 6H8.3C7 6 6 7 6 8.3V10.8V11.7V15.7C6 17 7 18 8.3 18H15.7C17 18 18 17 18 15.7V11.7V10.8V8.3C18 7 17 6 15.7 6ZM16.3 7.4H16.6V7.7V9.5H14.6V7.5L16.3 7.4ZM10.3 10.8C10.7 10.3 11.3 9.9 12 9.9C12.7 9.9 13.3 10.2 13.7 10.8C13.7 10.9 13.8 10.9 13.8 11C14 11.3 14.1 11.7 14.1 12C14.1 13.2 13.2 14.1 12 14.1C10.8 14.1 9.9 13.2 9.9 12C9.9 11.6 10 11.3 10.2 11C10.2 10.9 10.2 10.8 10.3 10.8ZM16.8 15.7C16.8 16.3 16.3 16.9 15.6 16.9H8.3C7.7 16.9 7.2 16.4 7.2 15.7V11.4V10.8H9C9 10.9 8.9 11 8.9 11.1C8.8 11.4 8.8 11.7 8.8 12C8.8 13.8 10.3 15.3 12.1 15.3C13.9 15.3 15.4 13.8 15.4 12C15.4 11.7 15.4 11.4 15.3 11.1C15.3 11 15.2 10.9 15.2 10.8H17V11.4V15.7H16.8Z"
-                                    fill="#222222"></path>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-                <div class="fb">
-                    <a href="https://www.instagram.com/v1k45h_rajput/" target="blank">
-                        <div class="fb2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.1 9V7.8C13.1 7.2 13.5 7.1 13.8 7.1C14.1 7.1 15.5 7.1 15.5 7.1V4.5H13.2C10.6 4.5 10 6.4 10 7.6V9H8.5V10.8V12H10C10 15.4 10 19.5 10 19.5H13C13 19.5 13 15.4 13 12H15.2L15.3 10.8L15.5 9H13.1Z"
-                                    fill="#222222"></path>
-                                <path
-                                    d="M20.5 3.5C18.3 1.3 15.3 0 12 0C12 0 12 0 11.9 0C8.8 0 5.8 1.2 3.5 3.5C1.3 5.7 0 8.7 0 12C0 18.6 5.3 24 12 24C18.6 24 24 18.6 24 12C24 8.8 22.8 5.8 20.5 3.5ZM12 22.6C6.1 22.6 1.4 17.8 1.4 12C1.4 9.2 2.5 6.5 4.5 4.5C6.5 2.5 9.1 1.4 12 1.4C14.8 1.4 17.5 2.5 19.5 4.5C21.5 6.5 22.6 9.2 22.6 12C22.6 17.9 17.8 22.6 12 22.6Z"
-                                    fill="#222222"></path>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="work">
+    <header>
+        <div class="nav__links">
+            <a href="https://500px.com/login">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEDQRKTbBBd75RtankTTGx4V7p_lPl_gzMLw&usqp=CAU"
+                    width="70px" height="18px" />
+            </a>
             <ul>
-                <li><a href="Popular.html"><button class="active">Photos</button></a></li>
-                <li><a href="#"><button>Galleries</button></a></li>
-                <li><a href="#"><button>Groups</button></a></li>
-                <li><a href="#"><button>Resume</button></a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="Galleries.html"> Discover <img class="arrow"
+                            src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
+                            height="20px"></a>
+                    <div class="dropdown-content">
+                        <a href="Popular.html">Popular</a>
+                        <a href="Fresh.html">Fresh</a>
+                        <a href="Echoice.html">Editors' Choice</a>
+                        <a href="Galleries.html">Galleries</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="Galleries.html"> Licensing <img class="arrow"
+                            src="D:\Harsh\College\Coding\Web Dev\3000px\media\chevron-down.svg" width="18px"
+                            height="20px"></a>
+                    <div class="dropdown-content">
+                        <a href="Popular.html">About Licensing</a>
+                        <a href="Fresh.html">Become a Contributor</a>
+                        <a href="Echoice.html">Submission Requirements</a>
+                        <a href="Galleries.html">Content types</a>
+                        <a href="Galleries.html">Content Distribution</a>
+                        <a href="Galleries.html">Commercial Grants</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="Pricing.html">
+                        NFT VAULT&nbsp;
+                        <a href="https://500px.com/login" class="beta">BETA</a>
+                    </a>
+                </li>
+                <li><a href="About.html"> Memberships </a></li>
+                <li><a href="Contact-Us.html"> Quests</a></li>
+                <li><a href="Contact-Us.html"> Blog</a></li>
             </ul>
+        </div>
+
+        <ul class="login">
+            <input type="text" placeholder="Search 500px">
+            <li><a href="Login.html"> Log in </a></li>
+            <li><a href="Cart.html" class="want-border"> Sign Up </a></li>
+        </ul>
+    </header>
+
+    <br><br><br><br><br>
+    <div class="main">
+        <div class="form">
+            <h2>Log in to 500px</h2>
+            <br />
+            <form>
+                <label>Email or
+                    Username*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br /><br />
+                <input type="email" /> <br />
+                <label>Password*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                        href="https://500px.com/login" class="col">Forgot password?</a></label><br /><br />
+                <input type="password" /><br /><br />
+
+                <input type="submit" value="Log in" class="a" /><br /><br />
+                <input type="submit" value="Log in with Apple" class="a1" /><br />
+                <input type="submit" value="Log in with Facebook" class="a2" /><br />
+                <input type="submit" value="Log in with Google" class="a3" /><br />
+                <p>
+                    Dont have an account ?&nbsp;&nbsp;<a href="https://500px.com/login" class="col">Sign up</a>
+                </p>
+            </form>
         </div>
     </div>
 </body>
