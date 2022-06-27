@@ -11,30 +11,31 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: fixed !important;
     background-color: white;
     width: 100%;
+    height: 80px;
     top: 0;
-    background-color: yellow;
+    box-shadow: 0 0 2px grey;
 }
 
 header a img {
     float: left;
     margin-top: 2%;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 
 .nav__links {
     list-style: none;
     padding: 10px 30px 10px 30px;
-    font-size: 17px;
-    width: 70%;
+    font-size: 16px;
+    width: 60%;
     margin-left: 2%;
 }
 
 .nav__links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 
 .nav__links li a {
@@ -49,6 +50,12 @@ header a img {
 
 li.dropdown {
     display: inline-block;
+}
+
+.arrow {
+    float: right;
+    margin-top: -19px;
+    margin-left: 5px;
 }
 
 .dropdown-content {
@@ -79,13 +86,27 @@ li.dropdown {
 
 .login {
     padding: 0px 25px 10px 25px;
-    margin-top: 2%;
-    margin-right: 2%;
+    margin-top: 18px;
+    width: 32%;
 }
 
 .login li {
     display: inline-block;
-    padding: 0px 15px;
+    padding: 0px 8px;
+}
+
+input[type="text"] {
+    border: none;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 10px;
+    background-image: url(search.svg);
+    background-color: #f7f8fa;
+    height: 35px;
+    width: 155px;
+    font-size: 16px;
+    padding-left: 45px;
 }
 
 .login li .want-border {
@@ -104,13 +125,32 @@ li.dropdown {
 .login li a:hover {
     color: #0870d1;
 }
+
+.beta:link {
+    background-color: #91c4f2;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.beta:hover {
+    color: black !important;
+}
+
+.main-header {
+    margin-left: 4%;
+}
 .details {
     margin-top: 80px;
 }
-.name,.address,.follow,.description,.stats {
+.name,
+.address,
+.follow,
+.description,
+.stats {
     /* border: 1px black solid; */
     margin-top: 12px;
-    
 }
 .name {
     font-size: 24px;
@@ -120,7 +160,8 @@ li.dropdown {
     margin: 0px;
     color: rgb(34, 34, 34);
     text-align: center;
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+        sansserif;
 }
 .address {
     font-size: 14px;
@@ -130,7 +171,8 @@ li.dropdown {
     text-align: center;
     /* margin: 0px; */
     color: rgb(34, 34, 34);
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+        sansserif;
     /* border-bottom: 1px dashed rgb(34, 34, 34); */
 }
 .follow {
@@ -138,10 +180,8 @@ li.dropdown {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .btn {
-    
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -153,7 +193,6 @@ li.dropdown {
     color: white;
     border-radius: 25px;
     width: 100px;
-    
 }
 
 .description {
@@ -174,7 +213,8 @@ li.dropdown {
     margin: 0px;
     color: rgb(34, 34, 34);
     text-align: center;
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+        sansserif;
     max-width: 560px;
 }
 
@@ -190,24 +230,28 @@ li.dropdown {
     margin-top: 16px;
 }
 
-.follower_det,.following_det {
+.follower_det,
+.following_det {
     word-break: break-word;
     max-width: 100%;
     display: flex;
     cursor: pointer;
 }
 
-.num1, .num2 {
+.num1,
+.num2 {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0px;
     text-transform: none;
     margin: 0px;
     color: rgb(34, 34, 34);
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+        sansserif;
 }
 
-.followers,.following {
+.followers,
+.following {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0px;
@@ -215,7 +259,8 @@ li.dropdown {
     margin: 0px;
     color: rgb(34, 34, 34);
     font-weight: bold;
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+        sansserif;
 }
 .social {
     word-break: break-word;
@@ -228,7 +273,7 @@ li.dropdown {
     margin-top: 16px;
     margin-bottom: 16px;
 }
- 
+
 .insta {
     word-break: break-word;
     max-width: 100%;
@@ -258,4 +303,43 @@ li.dropdown {
     width: 24px;
 }
 
+.work {
+    margin-left: -3%;
+    font-weight: bold;
+    text-align: center;
+}
 
+.active {
+    color: #0870d1 !important;
+    border-bottom: #0870d1 2.5px solid !important;
+}
+
+.work ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 5px;
+}
+
+.work a {
+    text-decoration: none;
+    color: grey;
+}
+
+.work button {
+    border: none;
+    border-bottom: white 3px solid;
+    background-color: transparent;
+    font-size: medium;
+    color: grey;
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.work button:hover {
+    border-bottom: #0870d1 2.5px solid;
+}
+
+.work button:hover {
+    color: #0870d1;
+}
